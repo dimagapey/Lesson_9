@@ -15,8 +15,8 @@ def check_arguments(arguments):
         raise SystemExit('There is no optional arguments')
 
 
-def read_from_csv(filename):
-    with open('cars.csv', 'r', encoding='utf-8') as csvfile:
+def read_from_csv():
+    with open(filename, 'r', encoding='utf-8') as csvfile:
         csv_reader = csv.DictReader(csvfile, delimeter=';')
         result = []
         filters = {k: v for k, v in args_dict.items() if v}
